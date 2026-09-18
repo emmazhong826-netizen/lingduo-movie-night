@@ -4,34 +4,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>联系我们｜Ling Duo Movie Night</title>
-  <link rel="stylesheet" href="style.css">
+
+  <title>联系我们｜Ling Duo Night</title>
+
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 
 <body>
 
-  <main class="page">
+  <main class="page contact-page">
 
-    <a href="index.html" class="back">← 返回首页</a>
+    <a href="./index.html" class="back">
+      ← 返回首页
+    </a>
 
-    <div class="page-label">Contact</div>
 
-    <h2>联系我们</h2>
+    <div class="page-label">
+      CONTACT
+    </div>
 
-    <p class="page-text">
-      想参加下一次 Ling Duo Movie Night，
-      或者只是想认识一些同样喜欢电影、思考与真实交流的人，
-      欢迎联系我们。
-      <br><br>
 
-      📍 东莞 · 厚街
-      <br>
-      WeChat：你的微信号
-      <br>
-      Email：your@email.com
-    </p>
+    <h2>
+      联系我们
+    </h2>
+
+
+    <div class="contact-channels contact-channels-simple">
+
+      <!-- WECHAT -->
+      <div class="contact-channel">
+
+        <span class="contact-label">
+          WECHAT
+        </span>
+
+        <button
+          class="contact-link"
+          onclick="openQR('wechatModal')"
+        >
+          Zhong_manlin ↗
+        </button>
+
+      </div>
+
+
+      <!-- OFFICIAL ACCOUNT -->
+      <div class="contact-channel">
+
+        <span class="contact-label">
+          WECHAT OFFICIAL ACCOUNT
+        </span>
+
+        <button
+          class="contact-link"
+          onclick="openQR('officialModal')"
+        >
+          Ling Duo 聚焦 ↗
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="contact-closing">
+
+      <span>
+        LING DUO NIGHT
+      </span>
+
+      <p>
+        从影片出发，谈生活里真正重要的问题。
+      </p>
+
+    </div>
 
   </main>
+
+
+  <footer>
+
+    <span>
+      Ling Duo Night
+    </span>
+
+    <span>
+      Dongguan · Houjie
+    </span>
+
+  </footer>
+
+
+
+  <!-- =========================================
+       PERSONAL WECHAT QR
+  ========================================== -->
+
+  <div
+    class="qr-modal"
+    id="wechatModal"
+    onclick="closeQR(event, 'wechatModal')"
+  >
+
+    <div class="qr-box">
+
+      <button
+        class="qr-close"
+        onclick="closeQRButton('wechatModal')"
+      >
+        ×
+      </button>
+
+      <span class="qr-label">
+        WECHAT
+      </span>
+
+      <h3>
+        Zhong_manlin
+      </h3>
+
+      <img
+        src="images/wechat-emma.jpg"
+        alt="Zhong_manlin 微信二维码"
+      >
+
+      <p>
+        打开微信扫一扫
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       OFFICIAL ACCOUNT QR
+  ========================================== -->
+
+  <div
+    class="qr-modal"
+    id="officialModal"
+    onclick="closeQR(event, 'officialModal')"
+  >
+
+    <div class="qr-box">
+
+      <button
+        class="qr-close"
+        onclick="closeQRButton('officialModal')"
+      >
+        ×
+      </button>
+
+      <span class="qr-label">
+        WECHAT OFFICIAL ACCOUNT
+      </span>
+
+      <h3>
+        Ling Duo 聚焦
+      </h3>
+
+      <img
+        src="images/wechat-official.jpg"
+        alt="Ling Duo 聚焦公众号二维码"
+      >
+
+      <p>
+        打开微信扫一扫关注
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================
+       MODAL SCRIPT
+  ========================================== -->
+
+  <script>
+
+    function openQR(id) {
+      document.getElementById(id).classList.add("active");
+      document.body.classList.add("modal-open");
+    }
+
+
+    function closeQR(event, id) {
+
+      if (event.target.id === id) {
+        document.getElementById(id).classList.remove("active");
+        document.body.classList.remove("modal-open");
+      }
+
+    }
+
+
+    function closeQRButton(id) {
+      document.getElementById(id).classList.remove("active");
+      document.body.classList.remove("modal-open");
+    }
+
+
+    document.addEventListener("keydown", function(event) {
+
+      if (event.key === "Escape") {
+
+        document.querySelectorAll(".qr-modal").forEach(function(modal) {
+          modal.classList.remove("active");
+        });
+
+        document.body.classList.remove("modal-open");
+
+      }
+
+    });
+
+  </script>
+
 
 </body>
 
