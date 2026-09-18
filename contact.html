@@ -15,21 +15,25 @@
 
   <main class="page contact-page">
 
+    <!-- BACK -->
     <a href="./index.html" class="back">
       ← 返回首页
     </a>
 
 
+    <!-- LABEL -->
     <div class="page-label">
       CONTACT
     </div>
 
 
+    <!-- TITLE -->
     <h2>
       联系我们
     </h2>
 
 
+    <!-- CONTACT CHANNELS -->
     <div class="contact-channels contact-channels-simple">
 
       <!-- WECHAT -->
@@ -49,25 +53,28 @@
       </div>
 
 
-      <!-- OFFICIAL ACCOUNT -->
+      <!-- WECHAT OFFICIAL ACCOUNT -->
       <div class="contact-channel">
 
         <span class="contact-label">
           WECHAT OFFICIAL ACCOUNT
         </span>
 
-        <button
+        <a
           class="contact-link"
-          onclick="openQR('officialModal')"
+          href="https://mp.weixin.qq.com/s/QZ3wKbwrOh4x5nTa450ERQ"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Ling Duo 聚焦 ↗
-        </button>
+        </a>
 
       </div>
 
     </div>
 
 
+    <!-- CLOSING -->
     <div class="contact-closing">
 
       <span>
@@ -83,6 +90,7 @@
   </main>
 
 
+  <!-- FOOTER -->
   <footer>
 
     <span>
@@ -98,7 +106,7 @@
 
 
   <!-- =========================================
-       PERSONAL WECHAT QR
+       WECHAT QR MODAL
   ========================================== -->
 
   <div
@@ -109,26 +117,36 @@
 
     <div class="qr-box">
 
+      <!-- CLOSE -->
       <button
         class="qr-close"
         onclick="closeQRButton('wechatModal')"
+        aria-label="关闭二维码"
       >
         ×
       </button>
 
+
+      <!-- LABEL -->
       <span class="qr-label">
         WECHAT
       </span>
 
+
+      <!-- NAME -->
       <h3>
         Zhong_manlin
       </h3>
 
+
+      <!-- QR CODE -->
       <img
-        src="images/wechat-emma.jpg"
+        src="./images/wechat-emma.jpg"
         alt="Zhong_manlin 微信二维码"
       >
 
+
+      <!-- NOTE -->
       <p>
         打开微信扫一扫
       </p>
@@ -140,49 +158,7 @@
 
 
   <!-- =========================================
-       OFFICIAL ACCOUNT QR
-  ========================================== -->
-
-  <div
-    class="qr-modal"
-    id="officialModal"
-    onclick="closeQR(event, 'officialModal')"
-  >
-
-    <div class="qr-box">
-
-      <button
-        class="qr-close"
-        onclick="closeQRButton('officialModal')"
-      >
-        ×
-      </button>
-
-      <span class="qr-label">
-        WECHAT OFFICIAL ACCOUNT
-      </span>
-
-      <h3>
-        Ling Duo 聚焦
-      </h3>
-
-      <img
-        src="images/wechat-official.jpg"
-        alt="Ling Duo 聚焦公众号二维码"
-      >
-
-      <p>
-        打开微信扫一扫关注
-      </p>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =========================================
-       MODAL SCRIPT
+       SCRIPT
   ========================================== -->
 
   <script>
@@ -196,16 +172,20 @@
     function closeQR(event, id) {
 
       if (event.target.id === id) {
+
         document.getElementById(id).classList.remove("active");
         document.body.classList.remove("modal-open");
+
       }
 
     }
 
 
     function closeQRButton(id) {
+
       document.getElementById(id).classList.remove("active");
       document.body.classList.remove("modal-open");
+
     }
 
 
