@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050505;
+  color: #f4f4f4;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+
+  min-height: 100vh;
+}
+
+
+/* -------------------------
+   HOME
+-------------------------- */
+
+.home {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 0 80px;
+}
+
+.hero {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-title {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: clamp(52px, 8vw, 105px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  max-width: 1100px;
+}
+
+h1 span {
+  display: block;
+  margin-top: 22px;
+  font-size: 0.55em;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+}
+
+.intro {
+  margin-top: 45px;
+  max-width: 650px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #aaa;
+}
+
+
+/* -------------------------
+   MENU
+-------------------------- */
+
+.menu {
+  margin-top: 80px;
+  border-top: 1px solid #292929;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 50px;
+  align-items: center;
+
+  padding: 30px 5px;
+
+  border-bottom: 1px solid #292929;
+
+  color: #f4f4f4;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  padding-left: 18px;
+  background: #101010;
+}
+
+.number {
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 0.1em;
+}
+
+.menu-title {
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 300;
+}
+
+.arrow {
+  font-size: 22px;
+  text-align: right;
+  color: #777;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover .arrow {
+  transform: translate(5px, -5px);
+  color: white;
+}
+
+
+/* -------------------------
+   INTERNAL PAGES
+-------------------------- */
+
+.page {
+  width: 88%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0 120px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 100px;
+
+  color: #777;
+  text-decoration: none;
+  font-size: 14px;
+
+  transition: color 0.3s ease;
+}
+
+.back:hover {
+  color: white;
+}
+
+.page-label {
+  color: #666;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.page h2 {
+  font-size: clamp(45px, 7vw, 80px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-bottom: 55px;
+}
+
+.page-text {
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.9;
+  max-width: 700px;
+}
+
+
+/* -------------------------
+   CONTENT CARDS
+-------------------------- */
+
+.content-list {
+  margin-top: 70px;
+  border-top: 1px solid #292929;
+}
+
+.content-card {
+  padding: 35px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.card-number {
+  color: #555;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.content-card h3 {
+  font-weight: 400;
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.content-card p {
+  color: #888;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+
+/* -------------------------
+   BUTTON
+-------------------------- */
+
+.button {
+  display: inline-block;
+  margin-top: 50px;
+
+  padding: 16px 28px;
+
+  border: 1px solid #444;
+
+  color: white;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: white;
+  color: black;
+}
+
+
+/* -------------------------
+   GALLERY
+-------------------------- */
+
+.gallery-grid {
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.photo-placeholder {
+  aspect-ratio: 4 / 3;
+  background: #111;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #444;
+  font-size: 13px;
+}
+
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+
+footer {
+  width: 88%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 35px 0;
+
+  border-top: 1px solid #222;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 11px;
+  color: #555;
+}
+
+
+/* -------------------------
+   MOBILE
+-------------------------- */
+
+@media (max-width: 700px) {
+
+  .home {
+    padding-top: 60px;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .menu-item {
+    grid-template-columns: 50px 1fr 30px;
+    padding: 25px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding-top: 35px;
+  }
+
+  .back {
+    margin-bottom: 70px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
