@@ -4,41 +4,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ling Duo 是谁｜Ling Duo Movie Night</title>
+
+  <title>关于 Ling Duo｜Ling Duo Night</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .ling-duo-page {
+      max-width: 900px;
+    }
+
+    .ling-duo-page .about-lead {
+      max-width: 780px;
+      margin: 55px 0 0;
+      color: #eeeeee;
+      font-size: clamp(27px, 3.7vw, 44px);
+      font-weight: 300;
+      line-height: 1.55;
+    }
+
+    .ling-duo-page .about-section {
+      max-width: 720px;
+      margin-top: 85px;
+    }
+
+    .ling-duo-page .about-section h3 {
+      margin: 0 0 26px;
+      color: #ededed;
+      font-size: 25px;
+      font-weight: 300;
+    }
+
+    .ling-duo-page .about-section p {
+      margin: 0 0 24px;
+      color: #aaaaaa;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.95;
+    }
+
+    .ling-duo-page .about-section strong {
+      color: #e5e5e5;
+      font-weight: 400;
+    }
+
+    .ling-duo-page .about-methods {
+      display: grid;
+      gap: 25px;
+      margin-top: 32px;
+    }
+
+    .ling-duo-page .about-method {
+      display: grid;
+      grid-template-columns: 45px 1fr;
+      gap: 15px;
+      align-items: start;
+    }
+
+    .ling-duo-page .about-method span {
+      padding-top: 5px;
+      color: #666666;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+    }
+
+    .ling-duo-page .about-method p {
+      margin: 0;
+    }
+
+    .ling-duo-page .about-closing {
+      margin: 90px 0 20px;
+      padding-top: 35px;
+      border-top: 1px solid #292929;
+    }
+
+    .ling-duo-page .about-closing p {
+      max-width: 650px;
+      margin: 0 0 26px;
+      color: #d6d6d6;
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    .ling-duo-page .about-link {
+      display: inline-block;
+      color: #eeeeee;
+      font-size: 15px;
+      text-decoration: none;
+      border-bottom: 1px solid #888888;
+      padding-bottom: 5px;
+    }
+
+    .ling-duo-page .about-link:hover {
+      border-color: #ffffff;
+    }
+
+    @media (max-width: 700px) {
+      .ling-duo-page .about-section {
+        margin-top: 65px;
+      }
+
+      .ling-duo-page .about-closing {
+        margin-top: 70px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <main class="page">
+  <main class="page ling-duo-page">
 
-    <a href="index.html" class="back">← 返回首页</a>
+    <a href="index.html" class="back">
+      ← 返回首页
+    </a>
 
-    <div class="page-label">About Ling Duo</div>
+    <div class="page-label">
+      ABOUT LING DUO
+    </div>
 
-    <h2>Ling Duo 是谁</h2>
+    <h2>
+      关于 Ling Duo
+    </h2>
 
-    <p class="page-text">
-      Ling Duo 是一个关注教育、思考与真实交流的教育团队。
-      <br><br>
-
-      我们相信，教育不只是帮助一个人找到正确答案，
-      也应该让一个人逐渐学会面对那些没有标准答案的问题。
-      <br><br>
-
-      如何阅读一个复杂的世界？
-      <br>
-      如何形成自己的判断？
-      <br>
-      如何表达自己的立场？
-      <br>
-      又如何认真听见一个与自己不同的人？
-      <br><br>
-
-      Ling Duo Movie Night 是我们把这种对话带出课堂的一种尝试。
+    <p class="about-lead">
+      教育应当先帮助一个人学会思考、认识自己，
+      再帮助他选择专业与前途。
     </p>
 
+    <section class="about-section">
+
+      <h3>我们的故事</h3>
+
+      <p>
+        2015年，Ivan Penkov 在温哥华创办了一所小学校。
+        他看到许多年轻人擅长完成目标，却很少有机会停下来想：
+        这些目标为什么值得追求？
+      </p>
+
+      <p>
+        2018年，中国留学生 Brandon Chen 走进 Ivan 的课堂。
+        当老师问“你怎么看”，他起初习惯从书里寻找正确答案。
+        Ivan 却继续追问：<strong>你自己的想法是什么？</strong>
+      </p>
+
+      <p>
+        Brandon 开始尝试表达，也在与老师、同学的讨论中不断修正自己的看法。
+        他逐渐发现，自己的想法值得被认真对待，而独立判断需要练习。
+        2024年，他把这段教育经历带回中国，与 Ivan 一起创办 Ling Duo。
+      </p>
+
+    </section>
+
+    <section class="about-section">
+
+      <h3>我们怎么教</h3>
+
+      <p>
+        思考不会凭空发生，也不能靠一堂课速成。
+        在 Ling Duo，我们和学生一起做三件事：
+      </p>
+
+      <div class="about-methods">
+
+        <div class="about-method">
+          <span>01</span>
+          <p>
+            <strong>认真阅读。</strong>
+            共读经典著作，让思考有材料，也练习理解与质疑。
+          </p>
+        </div>
+
+        <div class="about-method">
+          <span>02</span>
+          <p>
+            <strong>讨论真实问题。</strong>
+            把读到的思想带回今天的生活与社会，听见不同观点。
+          </p>
+        </div>
+
+        <div class="about-method">
+          <span>03</span>
+          <p>
+            <strong>形成自己的判断。</strong>
+            在表达、回应和反思中，逐渐弄清自己相信什么、想做什么。
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="about-closing">
+
+      <p>
+        Ling Duo Night 把这样的交流带出课堂。
+        如果你也愿意从一部电影开始，认真讨论身边的世界，欢迎来坐坐。
+      </p>
+
+      <a href="signup.html" class="about-link">
+        查看本期活动 ↗
+      </a>
+
+    </div>
+
   </main>
+
+  <footer>
+    <span>Ling Duo Night</span>
+    <span>Dongguan · Houjie</span>
+  </footer>
 
 </body>
 

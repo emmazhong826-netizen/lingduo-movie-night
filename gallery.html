@@ -8,33 +8,91 @@
   <title>活动剪影｜Ling Duo Night</title>
 
   <link rel="stylesheet" href="style.css">
-</head>
 
+  <style>
+    /* 本页专用排版，不影响网站其他页面 */
+    .gallery-page .moments {
+      margin-top: 72px;
+    }
+
+    .gallery-page .moments figure {
+      margin: 0;
+      min-width: 0;
+      overflow: hidden;
+      background: #121212;
+    }
+
+    .gallery-page .moments img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 开场主图 */
+    .gallery-page .moments-hero {
+      aspect-ratio: 16 / 9;
+    }
+
+    /* 双图：宽度、间距和高度统一 */
+    .gallery-page .moments-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery-page .moments-row figure {
+      aspect-ratio: 8 / 5;
+    }
+
+    /* 最后一组原图都是 4:3，完整呈现画面 */
+    .gallery-page .moments-row--closing figure {
+      aspect-ratio: 4 / 3;
+    }
+
+    @media (max-width: 700px) {
+      .gallery-page .moments {
+        margin-top: 48px;
+      }
+
+      .gallery-page .moments-hero,
+      .gallery-page .moments-row figure,
+      .gallery-page .moments-row--closing figure {
+        aspect-ratio: auto;
+      }
+
+      .gallery-page .moments img {
+        height: auto;
+        object-fit: contain;
+      }
+
+      .gallery-page .moments-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 14px;
+      }
+    }
+  </style>
+</head>
 
 <body>
 
   <main class="page gallery-page">
 
-    <!-- 返回首页 -->
     <a href="index.html" class="back">
       ← 返回首页
     </a>
 
-
-    <!-- PAGE LABEL -->
     <div class="page-label">
       MOMENTS
     </div>
-
 
     <h2>
       活动剪影
     </h2>
 
-
-    <!-- SHERRY TURKLE QUOTE -->
     <section class="gallery-quote-simple">
-
       <p>
         “面对面的交流，是我们所做的最具人性、也最能让人回归人性的事情。”
       </p>
@@ -42,59 +100,86 @@
       <span>
         — Sherry Turkle
       </span>
+    </section>
+
+    <section class="moments" aria-label="Ling Duo Night 活动照片">
+
+      <!-- 开场：参与者与活动现场 -->
+      <figure class="moments-hero">
+        <img
+          src="images/gallery/gallery03.JPG"
+          alt="参与者围坐交流，开始 Ling Duo Night 的电影讨论"
+        >
+      </figure>
+
+      <!-- 观影与讨论 -->
+      <div class="moments-row">
+
+        <figure>
+          <img
+            src="images/gallery/gallery04.JPG"
+            alt="参与者观看电影并记录想法"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/gallery/gallery05.JPG"
+            alt="参与者一起观看电影片段"
+            loading="lazy"
+          >
+        </figure>
+
+      </div>
+
+      <!-- 活动准备与电影主题 -->
+      <div class="moments-row">
+
+        <figure>
+          <img
+            src="images/gallery/gallery02.JPG"
+            alt="活动场地、屏幕与准备好的茶点"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/gallery/gallery06.JPG"
+            alt="活动放映的电影 Screened Out"
+            loading="lazy"
+          >
+        </figure>
+
+      </div>
+
+      <!-- 夜晚的空间 -->
+      <div class="moments-row moments-row--closing">
+
+        <figure>
+          <img
+            src="images/gallery/gallery07.JPG"
+            alt="夜晚的 Ling Duo Night 活动空间"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure>
+          <img
+            src="images/gallery/gallery01.JPG"
+            alt="夜晚的放映区与 Ling Duo Night 画面"
+            loading="lazy"
+          >
+        </figure>
+
+      </div>
 
     </section>
 
-
-
-    <!-- =========================================
-         PHOTO 01
-    ========================================== -->
-
-    <figure class="gallery-hero">
-
-      <img
-        src="images/gallery/night01-hero.JPG"
-        alt="Ling Duo Night"
-      >
-
-    </figure>
-
-
-
-    <!-- =========================================
-         PHOTO 02 + 03
-    ========================================== -->
-
-    <div class="gallery-two-column">
-
-      <figure class="gallery-landscape">
-
-        <img
-          src="images/gallery/night01-table.JPG"
-          alt="Ling Duo Night"
-        >
-
-      </figure>
-
-
-      <figure class="gallery-landscape">
-
-        <img
-          src="images/gallery/night01-space.JPG"
-          alt="Ling Duo Night"
-        >
-
-      </figure>
-
-    </div>
-
   </main>
 
-
-
   <footer>
-
     <span>
       Ling Duo Night
     </span>
@@ -102,9 +187,7 @@
     <span>
       Dongguan · Houjie
     </span>
-
   </footer>
-
 
 </body>
 
