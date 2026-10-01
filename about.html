@@ -1,3 +1,373 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="领舵 Ling Duo Night：公益观影与对谈，在交流中练习思考，认识同路人。"><title>关于 Ling Duo｜Ling Duo Night</title><link rel="stylesheet" href="style.css"></head>
-<body><main class="page editorial"><a href="index.html" class="back">← 返回首页</a><div class="page-label">ABOUT LING DUO</div><h2>关于 Ling Duo</h2><p class="lead">先学会思考，认识自己。<br>再选择自己的方向。</p><section><h3>我们为什么做教育</h3><p>领舵是一所由中国与加拿大团队联合创办的教育机构，扎根于温哥华与广州。我们的教育实践始于2015年，关注年轻人的独立思考、表达与自我认识。</p><p>在知识和答案越来越容易获得的时代，教育更需要帮助学生判断：哪些问题值得追问？什么理由值得相信？自己想在世界上做成什么事？</p><p>我们相信，思考需要时间，也需要一个鼓励质疑、认真倾听、尊重不同看法的环境。专业与前途很重要；理解自己为何选择，同样重要。</p></section><section><h3>两位创始人</h3><p class="founder-name">Ivan Penkov</p><p>2015年，Ivan 在温哥华创办了一所小学校。他关心的是：年轻人在走向专业学习之前，能否先建立基本的思考能力与判断力，认真理解自己追求的目标？</p><p class="founder-name">Brandon Chen</p><p>2018年，赴加留学的 Brandon 参加了 Ivan 的 PPE 课程。面对“你怎么看”，他起初习惯寻找书里的正确答案。老师持续追问他自己的想法，让他开始练习表达，在讨论中检验和修正判断。2024年，他将这段教育实践带回中国，与 Ivan 一起创办 Ling Duo。</p></section><section><h3>我们怎么教</h3><p><strong>认真阅读。</strong>系统共读经典著作，为思考积累材料，练习理解、分析与质疑。</p><p><strong>讨论真实问题。</strong>将思想带回今天的生活，围绕消费、关系、科技与公共议题，听见不同观点。</p><p><strong>形成自己的判断。</strong>在表达、回应和反思中，练习听说读写，逐渐认识自己，作出有理由的选择。</p><p>这些能力，也帮助学生更有判断地使用 AI：能够提出问题、审视答案，并对自己的选择负责。</p></section><section class="closing"><h3>从一次交流开始</h3><p>Ling Duo Night 是我们面向公众的公益观影与对谈活动。它把课堂里的阅读、提问与交流，带进一个开放、友善的夜晚。</p><a href="signup.html" class="text-link">查看本期活动 ↗</a></section></main><footer><span>Ling Duo Night</span><span>Dongguan · Houjie</span></footer></body></html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>关于 Ling Duo｜Ling Duo Night</title>
+
+  <meta
+    name="description"
+    content="领舵扎根于温哥华与广州，通过听说读写与思辨，帮助年轻人认识自己、形成独立判断，更好地面对 AI 时代。"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .page.about-page {
+      width: 88%;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
+
+    .about-page .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+      align-items: start;
+      gap: clamp(32px, 5vw, 60px);
+      margin-top: 36px;
+    }
+
+    .about-page .about-copy {
+      min-width: 0;
+    }
+
+    .about-page .about-copy p {
+      margin: 0 0 24px;
+      color: #c5c5ca;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.95;
+      overflow-wrap: break-word;
+    }
+
+    .about-page .about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-page .about-copy strong {
+      color: #f0f0f3;
+      font-weight: 500;
+    }
+
+    /* 宣传册完整显示，不裁切、不拉伸 */
+
+    .about-page .about-cover {
+      width: 100%;
+      max-width: 330px;
+      margin: 0;
+      padding: 0;
+      justify-self: end;
+      border: 0;
+      background: transparent;
+    }
+
+    .about-page .about-cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+    }
+
+    /* 微信报名入口 */
+
+    .about-page .join-details {
+      margin-top: 30px;
+    }
+
+    .about-page .join-details summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 13px 19px;
+      border: 1px solid #55555b;
+      border-radius: 6px;
+      background: transparent;
+      color: #f5f5f7;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.6;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .about-page .join-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .about-page .join-details summary::after {
+      content: "+";
+      color: #aaaab1;
+      font-size: 19px;
+      line-height: 1;
+    }
+
+    .about-page .join-details[open] summary::after {
+      content: "−";
+    }
+
+    .about-page .join-details summary:hover,
+    .about-page .copy-button:hover {
+      background: #19191c;
+    }
+
+    .about-page .join-details summary:focus-visible,
+    .about-page .copy-button:focus-visible {
+      outline: 2px solid #f5f5f7;
+      outline-offset: 5px;
+    }
+
+    .about-page .wechat-panel {
+      margin-top: 24px;
+    }
+
+    .about-page .wechat-panel .wechat-note {
+      margin-bottom: 18px;
+      color: #b8b8bf;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .about-page .wechat-qr {
+      display: block;
+      width: 180px;
+      max-width: 100%;
+      height: auto;
+      margin: 0 0 20px;
+      border: 0;
+      background: #ffffff;
+    }
+
+    .about-page .wechat-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .about-page .wechat-id {
+      color: #eeeeee;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .about-page .wechat-id span {
+      user-select: all;
+    }
+
+    .about-page .copy-button {
+      padding: 9px 14px;
+      border: 1px solid #55555b;
+      border-radius: 6px;
+      background: transparent;
+      color: #f5f5f7;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .about-page .wechat-panel .copy-status {
+      min-height: 24px;
+      margin: 10px 0 0;
+      color: #aaaab1;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 850px) {
+      .about-page .about-layout {
+        gap: 30px;
+      }
+
+      .about-page .about-copy p {
+        font-size: 15px;
+        line-height: 1.9;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page.about-page {
+        padding-bottom: 55px;
+      }
+
+      .about-page .about-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-top: 28px;
+      }
+
+      .about-page .about-copy p {
+        margin-bottom: 22px;
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .about-page .about-cover {
+        max-width: 360px;
+        justify-self: center;
+      }
+
+      .about-page .join-details {
+        margin-top: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page about-page">
+
+    <a href="index.html" class="back">
+      ← 返回首页
+    </a>
+
+    <div class="page-label">
+      ABOUT LING DUO
+    </div>
+
+    <h2>
+      关于 Ling Duo
+    </h2>
+
+    <div class="about-layout">
+
+      <div class="about-copy">
+
+        <p>
+          领舵是一所扎根于温哥华与广州的创新型教育机构。自2015年起，我们一直在探索：怎样的教育，能帮助孩子更好地面对 AI 时代？
+        </p>
+
+        <p>
+          变化越快，越要投资不变的东西。我们专注于培养孩子最基础、也最经得起变化的能力——听说读写与思辨。随着人工智能的发展，获取知识越来越容易。<strong>知识本身已不再是人最重要的资产，思考和判断的能力才是。</strong>
+        </p>
+
+        <p>
+          独立思考，是孩子认识自己、找到人生方向的开端。判断力，也是孩子能够让 AI 为自己所用，而不是被它牵着走的前提。
+        </p>
+
+        <p>
+          我们的校友在哈佛大学、哥伦比亚大学、多伦多大学、英属不列颠哥伦比亚大学及德国马克斯·普朗克研究所等机构继续学习与研究。我们希望年轻人收获的，不只是漂亮的简历与成就，更是对自己的认识、对人生意义与使命的探索，以及忠于自己、自主选择人生道路的能力。
+        </p>
+
+        <p>
+          如果您想进一步了解领舵，欢迎来我们的公益电影之夜 <strong>Ling Duo Night</strong> 坐坐。每周日晚上7–9点，我们与老师、家长及不同年龄的朋友一起看电影，分享观点与生活经验。活动面向公众，免费参加，无需专业背景。也特别欢迎您带家人一起来，让不同世代在同一个屋檐下，耐心交流。
+        </p>
+
+        <details class="join-details">
+
+          <summary>
+            参加 Ling Duo Night
+          </summary>
+
+          <div class="wechat-panel">
+
+            <p class="wechat-note">
+              添加 Emma 的微信，告诉我们您想参加电影之夜即可。
+            </p>
+
+            <img
+              src="images/wechat-emma.JPG"
+              alt="Emma 的报名微信二维码"
+              class="wechat-qr"
+              loading="lazy"
+            >
+
+            <div class="wechat-actions">
+
+              <span class="wechat-id">
+                微信号：<span>Zhong_manlin</span>
+              </span>
+
+              <button
+                type="button"
+                class="copy-button"
+                id="copy-wechat"
+              >
+                复制微信号
+              </button>
+
+            </div>
+
+            <p
+              class="copy-status"
+              id="copy-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+          </div>
+
+        </details>
+
+      </div>
+
+      <figure class="about-cover">
+        <img
+          src="images/gallery/lingduo01.PNG"
+          alt="领舵教育宣传册封面"
+          decoding="async"
+        >
+      </figure>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <span>Ling Duo Night</span>
+    <span>Dongguan · Houjie</span>
+  </footer>
+
+  <script>
+    const copyButton = document.getElementById("copy-wechat");
+    const copyStatus = document.getElementById("copy-status");
+    const wechatId = "Zhong_manlin";
+
+    copyButton.addEventListener("click", async () => {
+      let copied = false;
+
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(wechatId);
+          copied = true;
+        }
+      } catch (error) {
+        copied = false;
+      }
+
+      if (!copied) {
+        const field = document.createElement("textarea");
+
+        field.value = wechatId;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+
+        document.body.appendChild(field);
+        field.select();
+        field.setSelectionRange(0, field.value.length);
+
+        try {
+          copied = document.execCommand("copy");
+        } catch (error) {
+          copied = false;
+        }
+
+        field.remove();
+        copyButton.focus();
+      }
+
+      copyStatus.textContent = copied
+        ? "已复制。打开微信，搜索这个微信号即可添加 Emma。"
+        : "请长按或选中微信号，手动复制后在微信中搜索。";
+    });
+  </script>
+
+</body>
+
+</html>
